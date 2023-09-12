@@ -45,6 +45,12 @@ class MainActivity : AppCompatActivity(), WaveFormCallback {
         saveFile()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        registerForWritePermission.unregister()
+        registerOpenFileActivityResult.unregister()
+    }
+
     private fun openFile(uri: Uri?) {
         if (uri == null) {
             return showMessage("Error occurred while opening file!")
