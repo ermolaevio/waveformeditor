@@ -50,7 +50,9 @@ class MainView : LinearLayout {
                 button.layoutParams = MarginLayoutParams(
                     android.view.ViewGroup.LayoutParams.MATCH_PARENT,
                     android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-                )
+                ).also { params ->
+                    params.topMargin = dp(20)
+                }
                 button.text = "Open File Picker"
                 button.setOnClickListener { callback.openFileClicked() }
             }
@@ -61,7 +63,9 @@ class MainView : LinearLayout {
                 button.layoutParams = MarginLayoutParams(
                     android.view.ViewGroup.LayoutParams.MATCH_PARENT,
                     android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-                )
+                ).also { params ->
+                    params.topMargin = dp(20)
+                }
                 button.text = "Save new file"
                 button.setOnClickListener { callback.saveFileClicked() }
             }
