@@ -93,8 +93,8 @@ class MainActivity : AppCompatActivity(), WaveFormCallback {
 
         lifecycleScope.launch {
             val msg = when (FileUtils.savePoints(this@MainActivity, points)) {
-                FileUtils.SaveFileResult.Success -> "Success!"
-                FileUtils.SaveFileResult.Error -> "Error!"
+                is FileUtils.SaveFileResult.Success -> "Success!"
+                is FileUtils.SaveFileResult.Error -> "Error!"
             }
             showMessage(msg)
         }
