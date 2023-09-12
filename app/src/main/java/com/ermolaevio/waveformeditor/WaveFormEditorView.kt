@@ -1,4 +1,4 @@
-package com.ermolaevio.waveformeditor.ui
+package com.ermolaevio.waveformeditor
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,11 +11,10 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.ermolaevio.waveformeditor.R
-import com.ermolaevio.waveformeditor.ui.utils.clamp
-import com.ermolaevio.waveformeditor.ui.utils.dp
-import com.ermolaevio.waveformeditor.ui.utils.transform
-import com.ermolaevio.waveformeditor.ui.utils.withAlpha
+import com.ermolaevio.waveformeditor.utils.clamp
+import com.ermolaevio.waveformeditor.utils.dp
+import com.ermolaevio.waveformeditor.utils.transform
+import com.ermolaevio.waveformeditor.utils.withAlpha
 import kotlin.math.ceil
 
 internal typealias Points = Pair<Float, Float>

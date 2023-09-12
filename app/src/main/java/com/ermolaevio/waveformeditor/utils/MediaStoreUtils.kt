@@ -1,4 +1,4 @@
-package com.ermolaevio.waveformeditor.ui.utils
+package com.ermolaevio.waveformeditor.utils
 
 import android.content.ContentValues
 import android.content.Context

@@ -13,12 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import com.ermolaevio.waveformeditor.ui.MainView
-import com.ermolaevio.waveformeditor.ui.Points
-import com.ermolaevio.waveformeditor.ui.WaveFormCallback
-import com.ermolaevio.waveformeditor.ui.WaveFormEditorView
-import com.ermolaevio.waveformeditor.ui.utils.FileUtils
-import com.ermolaevio.waveformeditor.ui.utils.FileUtils.GetPointsResult
+import com.ermolaevio.waveformeditor.utils.FileUtils
+import com.ermolaevio.waveformeditor.utils.FileUtils.GetPointsResult
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), WaveFormCallback {

@@ -1,4 +1,4 @@
-package com.ermolaevio.waveformeditor.ui
+package com.ermolaevio.waveformeditor
 
 import android.content.Context
 import android.graphics.Color
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.core.view.setPadding
-import com.ermolaevio.waveformeditor.ui.utils.dp
+import com.ermolaevio.waveformeditor.utils.dp
 
 interface WaveFormCallback {
     fun openFileClicked()

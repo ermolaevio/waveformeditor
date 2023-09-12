@@ -1,11 +1,11 @@
-package com.ermolaevio.waveformeditor.ui.utils
+package com.ermolaevio.waveformeditor.utils
 
 import android.content.Context
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import androidx.annotation.RequiresApi
-import com.ermolaevio.waveformeditor.ui.Points
+import com.ermolaevio.waveformeditor.Points
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
