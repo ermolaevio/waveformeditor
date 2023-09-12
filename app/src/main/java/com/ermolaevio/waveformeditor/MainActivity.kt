@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.contract.ActivityResultContracts.RequestMultiplePermissions
@@ -78,14 +77,12 @@ class MainActivity : AppCompatActivity(), WaveFormCallback {
     }
 
     private fun showPoints(points: List<Points>) {
-        Log.d("DocumentPickerTag", "str: ${points.joinToString(separator = "\n")}")
         waveFormEditorView.isVisible = points.isNotEmpty()
         waveFormEditorView.setData(points)
     }
 
     private fun saveFile() {
-        val points = waveFormEditorView.selectedPoints.orEmpty()
-
+        val points = waveFormEditorView.selectedPoints
         if (points.isEmpty()) {
             return showMessage("Please choice a valid slice with at least 2 points!")
         }

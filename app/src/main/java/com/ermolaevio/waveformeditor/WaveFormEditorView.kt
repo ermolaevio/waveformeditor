@@ -7,7 +7,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.content.ContextCompat
@@ -21,7 +20,6 @@ internal typealias Points = Pair<Float, Float>
 
 private const val MIN_POINTS_LENGTH = 3
 private const val SELECTOR_COLOR_ALPHA = 170
-private const val TAG = "WaveFormEditorViewTag"
 
 class WaveFormEditorView : View {
     constructor(context: Context?) : super(context)
@@ -314,8 +312,6 @@ class WaveFormEditorView : View {
         val step = widthF / points.count().dec()
         val leftIndex = ceil(leftSelectorX / step).toInt()
         val rightIndex = (rightSelectorWithWidthX / step).toInt()
-
-        Log.d(TAG, "new points:$leftIndex, $rightIndex from: ${points.size}")
 
         val subList = if (leftIndex >= rightIndex) {
             emptyList()

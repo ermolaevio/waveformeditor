@@ -3,7 +3,6 @@ package com.ermolaevio.waveformeditor
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
-import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.core.view.isVisible
@@ -41,12 +40,6 @@ class MainView : LinearLayout {
                     android.view.ViewGroup.LayoutParams.MATCH_PARENT,
                     editorView.dp(400)
                 )
-                editorView.onNewWaveSelected = {
-                    Log.d(
-                        "AudioWaveTag",
-                        "selectedPoints: ${it.joinToString(separator = ",")}"
-                    )
-                }
                 editorView.isVisible = false
                 waveFormEditorView = editorView
             }
